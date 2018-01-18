@@ -2,7 +2,7 @@
 /**
  * Created by Yahya Hussein.
  * Date: 1/17/2018
- * Time: 11:08pm
+ * Class: AD320
  * This is the loan (mortgage) calculator....
  */
 
