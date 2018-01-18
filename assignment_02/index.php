@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Dr. Paul Z. Wu
- * Date: 1/13/2015
- * Time: 9:40
+ * Created by Yahya Hussein.
+ * Date: 1/17/2018
+ * Time: 11:08pm
  * This is the loan (mortgage) calculator....
  */
 
@@ -52,13 +51,22 @@ $periodInYears = $_REQUEST['years'];
 echo "Loan amount: $loanAmount <br/>";
 echo "Annual Rate: $annualRate <br/>";
 echo "Years in the loan periond: $periodInYears <br/>";
-echo "Monthly payment is: $monthPay <br/>";
-echo "Total interest is: $totalInt <br/>";
+echo "Monthly payment is: $periodInYears <br/>";
+echo "Total interest is: $interest <br/>";
+
 
 if ($loanAmount && $annualRate && $periodInYears) { // Check if these values are valid.
     $monthRate = $annualRate / 12 / 100;
     //Start to do your work here. Don't use operator '**'.
 
+    /* calculation for loan */
+    $interest=$interest / 100;  
+   $result=$interest / 12 * pow(1 + $interest / 12,$months) / (pow(1 + $interest / 12,$months) - 1) * $capital;      
+   printf(“Monthly pay is %.2f”, $result);
+
+    $interest = $loanAmount * $annualRate / 100;
+    $capital = $loanAmount + $interest;
+    $periodInYears = $capital / $periodInYears;
 
 }
 ?>
