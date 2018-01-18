@@ -52,6 +52,8 @@ $periodInYears = $_REQUEST['years'];
 echo "Loan amount: $loanAmount <br/>";
 echo "Annual Rate: $annualRate <br/>";
 echo "Years in the loan periond: $periodInYears <br/>";
+echo "Monthly payment is: $monthPay <br/>";
+echo "Total interest is: $totalInt <br/>";
 
 if ($loanAmount && $annualRate && $periodInYears) { // Check if these values are valid.
     $monthRate = $annualRate / 12 / 100;
