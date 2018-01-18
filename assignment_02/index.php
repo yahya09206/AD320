@@ -21,15 +21,15 @@
         <table align="center">
             <tr>
                 <td> Loan Amount</td>
-                <td><input name="loan_amount" type="text" value="5000"/></td>
+                <td><input name="loan_amount" type="text"/></td>
             </tr>
             <tr>
                 <td> Interest Rate (annual %)</td>
-                <td><input name="annual_rate" type="text" value="12"/></td>
+                <td><input name="annual_rate" type="text"/></td>
             </tr>
             <tr>
                 <td> Period in years</td>
-                <td><input name="years" type="text" value="3"></td>
+                <td><input name="years" type="text"></td>
             </tr>
             <tr>
 
