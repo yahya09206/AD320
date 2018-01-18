@@ -51,8 +51,6 @@ $periodInYears = $_REQUEST['years'];
 echo "Loan amount: $loanAmount <br/>";
 echo "Annual Rate: $annualRate <br/>";
 echo "Years in the loan periond: $periodInYears <br/>";
-echo "Monthly payment is: $periodInYears <br/>";
-echo "Total interest is: $interest <br/>";
 
 
 if ($loanAmount && $annualRate && $periodInYears) { // Check if these values are valid.
@@ -60,13 +58,11 @@ if ($loanAmount && $annualRate && $periodInYears) { // Check if these values are
     //Start to do your work here. Don't use operator '**'.
 
     /* calculation for loan */
-    $interest=$interest / 100;  
-   $result=$interest / 12 * pow(1 + $interest / 12,$months) / (pow(1 + $interest / 12,$months) - 1) * $capital;      
-   printf(“Monthly pay is %.2f”, $result);
-
     $interest = $loanAmount * $annualRate / 100;
     $capital = $loanAmount + $interest;
     $periodInYears = $capital / $periodInYears;
+    echo "Monthly payment is: $periodInYears <br/>";
+    echo "Total interest is: $interest <br/>";
 
 }
 ?>
