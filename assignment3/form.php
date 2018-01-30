@@ -28,22 +28,23 @@
 </div>
 <?php 
 //calculated by user input
-$sqftOfWall = $_POST['sqftOfWallSpace'];
-$costOfPaint = $_POST['priceOfPaintPerGallon'];
+$sqftOfWall = $_REQUEST['sqftOfWallSpace'];
+$costOfPaint = $_REQUEST['priceOfPaintPerGallon'];
 
 //validations
-if(isset($sqftOfWall) && isset($costOfPaint)){
+if($sqftOfWall && $costOfPaint){
+	//CALCULATIONS FOR PAINT JOB
 	$numberOfGallonsOfPaint = $wallSpace / 115;
 	$reqHoursOfLabor = $numberOfGallonsOfPaint * 8;
 	$totCostOfPaintJob = $numberOfGallonsOfPaint * $costOfPaint;
 	$totLaborCharges = $reqHoursOfLabor * 20;
 	$totCostOfPaintJob = $totCostOfPaintJob + $totLaborCharges;
 
-	echo "The number of gallons of paint required: " . $numberOfGallonsOfPaint . "<br/>";
-	echo "The hours of labor required: " . $numberOfGallonsOfPaint . "<br/>";
-	echo "The cost of the paint: " . $numberOfGallonsOfPaint . "<br/>";
-	echo "The labor charges: " . $numberOfGallonsOfPaint . "<br/>";
-	echo "The total cost of the paint job: " . $numberOfGallonsOfPaint . "<br/>";
+	echo "The number of gallons of paint required: $numberOfGallonsOfPaint <br/>";
+	echo "The hours of labor required: $reqHoursOfLabor <br/>";
+	echo "The cost of the paint: $totCostOfPaintJob <br/>";
+	echo "The labor charges: totLaborCharges <br/>";
+	echo "The total cost of the paint job: totCostOfPaintJob <br/>";
 }
 
 
