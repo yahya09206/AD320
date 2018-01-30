@@ -39,13 +39,13 @@ if($sqftOfWall && $costOfPaint){
 	$totCostOfPaintJob = $numberOfGallonsOfPaint * $costOfPaint;
 	$totLaborCharges = $reqHoursOfLabor * 20;
 	$totCostOfPaintJob = $totCostOfPaintJob + $totLaborCharges;
-
 	echo "The number of gallons of paint required: $numberOfGallonsOfPaint <br/>";
 	echo "The hours of labor required: $reqHoursOfLabor <br/>";
 	echo "The cost of the paint: $totCostOfPaintJob <br/>";
-	echo "The labor charges: totLaborCharges <br/>";
-	echo "The total cost of the paint job: totCostOfPaintJob <br/>";
 }
+
+	echo "The labor charges: $totLaborCharges <br/>";
+	echo "The total cost of the paint job: $totCostOfPaintJob <br/>";
 
 
 ?>
