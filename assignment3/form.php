@@ -5,8 +5,11 @@
 </head>
 <body>
 <form action="calc.php" method="post">
-	<input type="number" name="sqftOfWallSpace" placeholder="Please enter sqftOfWallSpace to be painted">
-	<input type="number" name="priceOfPaintPerGallon" placeholder="Please enter priceOfPaintPerGallon">
+	<label>Please enter number of square feet of wallspace
+	<input type="number" name="sqftOfWallSpace"></label>
+	<label>please enter price of paint per gallon
+	<input type="number" name="priceOfPaintPerGallon"></label>
+	<input type="submit" name="submit">
 </form>
 </body>
 </html>
