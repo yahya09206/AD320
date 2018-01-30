@@ -1,14 +1,20 @@
 <?php 
-//constant numbers
-$sqftOfWallSpace = 115;
-$hoursOfLabor = 8;
-$chargePerHour = 20;
-
 //calculated by user input
-$numberOfGallonsOfPaint;
+$sqftOfWall = $_POST['sqftOfWallSpace'];
+$costOfPaint = $_POST['priceOfPaintPerGallon'];
+
+//calculations to be done
 $reqHoursOfLabor;
-$costOfPaint;
 $totLaborCharges;
 $totCostOfPaintJob;
+
+if(is_numeric($sqftOfWall) && is_numeric($costOfPaint)){
+	$numberOfGallonsOfPaint = $wallSpace / 115;
+	$reqHoursOfLabor = $numberOfGallonsOfPaint * 8;
+	$totCostOfPaintJob = $numberOfGallonsOfPaint * $costOfPaint;
+	$totLaborCharges = $reqHoursOfLabor * 20;
+	$totCostOfPaintJob = $totCostOfPaintJob + $totLaborCharges;
+
+}
 
 ?>
