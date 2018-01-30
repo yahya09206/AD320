@@ -22,8 +22,6 @@ if(is_numeric($sqftOfWall) && is_numeric($costOfPaint)){
 	echo "The labor charges: " . $numberOfGallonsOfPaint;
 	echo "The total cost of the paint job: " . $numberOfGallonsOfPaint;
 
-
-
 }
 
 ?>
