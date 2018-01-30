@@ -12,11 +12,11 @@ if(is_numeric($sqftOfWall) && is_numeric($costOfPaint)){
 	$totLaborCharges = $reqHoursOfLabor * 20;
 	$totCostOfPaintJob = $totCostOfPaintJob + $totLaborCharges;
 
-	echo "The number of gallons of paint required: " . $numberOfGallonsOfPaint;
-	echo "The hours of labor required: " . $numberOfGallonsOfPaint;
-	echo "The cost of the paint: " . $numberOfGallonsOfPaint;
-	echo "The labor charges: " . $numberOfGallonsOfPaint;
-	echo "The total cost of the paint job: " . $numberOfGallonsOfPaint;
+	echo "The number of gallons of paint required: " . $numberOfGallonsOfPaint . "<br>";
+	echo "The hours of labor required: " . $numberOfGallonsOfPaint . "<br>";
+	echo "The cost of the paint: " . $numberOfGallonsOfPaint . "<br>";
+	echo "The labor charges: " . $numberOfGallonsOfPaint . "<br>";
+	echo "The total cost of the paint job: " . $numberOfGallonsOfPaint . "<br>";
 
 }
 
