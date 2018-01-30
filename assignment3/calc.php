@@ -3,10 +3,6 @@
 $sqftOfWall = $_POST['sqftOfWallSpace'];
 $costOfPaint = $_POST['priceOfPaintPerGallon'];
 
-//calculations to be done
-$reqHoursOfLabor;
-$totLaborCharges;
-$totCostOfPaintJob;
 
 //validations
 if(is_numeric($sqftOfWall) && is_numeric($costOfPaint)){
